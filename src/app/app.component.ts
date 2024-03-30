@@ -12,8 +12,11 @@ export class AppComponent {
   title = 'influenzar-frontend';
   constructor(private router:Router,private activatedRoute: ActivatedRoute){}
   
-  singin(){
-    console.log("inside function")
+  signin(){
     this.router.navigateByUrl('signin');
+  }
+
+  login(){
+    this.router.navigateByUrl('login');
   }
 }
