@@ -14,6 +14,7 @@
             </div>
             <div class="user-box">
                 <select id="role" [(ngModel)]="user.role" #roleRef name="role">
+                    <option value="" selected disabled hidden>Select a role</option>
                     <option value="Influenzar">Influenzar</option>
                     <option value="Advertiser">Advertiser</option>
                 </select>

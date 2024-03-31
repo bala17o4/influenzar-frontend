@@ -34,18 +34,33 @@
     background: transparent;
 }
 
-.register-box .user-box select{
+.register-box .user-box select {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #03e9f4;
+    padding: 10px 0; /* Adjust padding to match input fields */
+    font-size: 16px; /* Ensure font size matches input fields */
+    color: white; /* Match text color with input fields */
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #03e9f4;
+    border-bottom: 1px solid #03e9f4; /* Ensure border styling matches input fields */
     outline: none;
-    background: transparent;
+    background: transparent; /*Ensure background matches input fields */
+    -webkit-appearance: none; /* Remove default styling */
+    -moz-appearance: none;
+    appearance: none;
 }
 
+/* Additional styling for dropdown arrow */
+.register-box .user-box select::-ms-expand {
+    display: none; /* Hide dropdown arrow in IE */
+}
+.register-box .user-box select::after {
+    content: '▼'; /* Custom dropdown arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
 .register-box .user-box label{
     position: absolute;
     top: 0;
@@ -79,4 +94,14 @@ input[type=submit]{
 
 .back{
     margin-top: 3%;
+}
+.register-box input[type="submit"] {
+    background: #28d;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.register-box .user-box select option {
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the background color as needed */
+    color: #fff; /* Ensure the text color is visible against the background */
 }
